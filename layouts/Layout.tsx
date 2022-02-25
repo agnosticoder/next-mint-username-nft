@@ -23,7 +23,7 @@ const Layout:FC = ({ children }) => (
                     </li> */}
                 </ul>
             </div>
-            <h1>App Name</h1>
+            <h1>Wave Portal</h1>
         </div>
         <main>{children}</main>
     </div>

@@ -1,9 +1,14 @@
-import styles from '../styles/modules/Hello.module.scss';
+import styles from '../styles/modules/App.module.scss';
 
 const App = () => {
+
+    const onWave = () => {
+        console.log('Waved');
+    }
+
     return (
         <div className={styles.container}>
-            <h2 className={styles.test}>Content color has bee applied using css modules but using scss</h2>
+            <button onClick={onWave}>Do you want to wave at me? 👋🏽</button>
         </div>
     );
 };
