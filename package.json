@@ -8,10 +8,12 @@
     "lint": "next lint",
     "node": "hardhat node",
     "run": "hardhat run scripts/run.ts",
-    "deploy": "hardhat run scripts/deploy.ts --network localhost"
+    "deployLocal": "hardhat run scripts/deploy.ts --network localhost",
+    "deployTest": "hardhat run scripts/deploy.ts --network rinkeby"
   },
   "dependencies": {
     "chalk": "^4.1.2",
+    "dotenv": "^16.0.0",
     "next": "12.0.10",
     "react": "17.0.2",
     "react-dom": "17.0.2",
