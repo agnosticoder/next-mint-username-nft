@@ -9,7 +9,9 @@
     "node": "hardhat node",
     "run": "hardhat run scripts/run.ts",
     "deployLocal": "hardhat run scripts/deploy.ts --network localhost",
-    "deployTest": "hardhat run scripts/deploy.ts --network rinkeby"
+    "deployTest": "hardhat run scripts/deploy.ts --network rinkeby",
+    "test-contracts": "hardhat test",
+    "batch": "hardhat node && hardhat run scripts/deploy.ts --network localhost"
   },
   "dependencies": {
     "chalk": "^4.1.2",
@@ -22,6 +24,8 @@
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-waffle": "^2.0.2",
+    "@types/jest": "^27.4.1",
+    "@types/mocha": "^9.1.0",
     "@types/node": "17.0.15",
     "@types/react": "17.0.39",
     "chai": "^4.3.6",

@@ -13,7 +13,7 @@ export const main = async () => {
     //* This blockchain destroys after each run to save the computing resources
     const waveContract = await waveContractFactory.deploy();
 
-    //? This is just a check, so only execute console.log when it is deployed
+    //* wait for the contract to get mined by the miners
     await waveContract.deployed();
 
     //* getting contract and owners info
@@ -23,9 +23,9 @@ export const main = async () => {
     //* Calling public functions on contract after deploying
     let waveCount = await waveContract.getTotalWaves();
     console.log({waveCount});
-    let wave = await waveContract.wave();
+    let wave = await waveContract.wave('message 1');
     waveCount = await waveContract.getTotalWaves();
-    await waveContract.connect(randomPerson).wave();
+    await waveContract.connect(randomPerson).wave('message 2');
     console.log({ waveCount });
     waveCount = await waveContract.getTotalWaves();
     console.log({ waveCount });

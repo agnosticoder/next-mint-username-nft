@@ -7,7 +7,7 @@ const main = async () => {
     console.log('Pal got this much eth in his account: ', await (await deployer.getBalance()).toString());
 
     const waveContractFactory = await ethers.getContractFactory('WavePortal');
-    const waveContract = await waveContractFactory.deploy();
+    const waveContract = await waveContractFactory.deploy({value: ethers.utils.parseEther('0.01')});
     await waveContract.deployed();
 
     console.log('Wave Contract is deployed at ', waveContract.address);
