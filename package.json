@@ -9,11 +9,13 @@
     "node": "hardhat node",
     "run": "hardhat run scripts/run.ts",
     "deployLocal": "hardhat run scripts/deploy.ts --network localhost",
-    "deployTest": "hardhat run scripts/deploy.ts --network rinkeby",
+    "deployTestR": "hardhat run scripts/deploy.ts --network rinkeby",
+    "deployTestM": "hardhat run scripts/deploy.ts --network mumbai",
     "test-contracts": "hardhat test",
     "batch": "hardhat node && hardhat run scripts/deploy.ts --network localhost"
   },
   "dependencies": {
+    "@openzeppelin/contracts": "^4.5.0",
     "chalk": "^4.1.2",
     "dotenv": "^16.0.0",
     "next": "12.0.10",

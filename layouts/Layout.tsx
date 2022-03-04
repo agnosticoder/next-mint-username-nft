@@ -23,7 +23,8 @@ const Layout:FC = ({ children }) => (
                     </li> */}
                 </ul>
             </div>
-            <h1>Wave Portal</h1>
+            <h1>Mint your unique username in the whole universe 🌎</h1>
+            <h2 style={{color: 'beige'}}>Please style this funckin.. app, Pal!</h2>
         </div>
         <main>{children}</main>
     </div>

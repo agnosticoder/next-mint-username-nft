@@ -1,16 +1,19 @@
 import { ethers } from "hardhat";
 
 const main = async () => {
-    const [deployer, buddy] = await ethers.getSigners();
-    console.log('Address of pal the deployer', deployer.address);
-    // console.log('Address of pal\'s buddy', buddy.address);
-    console.log('Pal got this much eth in his account: ', await (await deployer.getBalance()).toString());
+    const MintNFTFacotory = await ethers.getContractFactory('MintNFT');
+    const mintNFTContract = await MintNFTFacotory.deploy();
+    await mintNFTContract.deployed();
 
-    const waveContractFactory = await ethers.getContractFactory('WavePortal');
-    const waveContract = await waveContractFactory.deploy({value: ethers.utils.parseEther('0.01')});
-    await waveContract.deployed();
+    console.log('Shinigami is coming at ', mintNFTContract.address);
 
-    console.log('Wave Contract is deployed at ', waveContract.address);
+    //* Calling public functions on contract after deploying
+    const t1 = await mintNFTContract.mintUsernameNFT('agnosticoder');
+    await t1.wait();
+    console.log('#1 NFT Minted')
+    const t2 = await mintNFTContract.mintUsernameNFT('satindergzs');
+    await t2.wait();
+    console.log('#2 NFT Minted')
 }
 
 const runMain = async () => {

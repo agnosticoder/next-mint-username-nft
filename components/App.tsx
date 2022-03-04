@@ -1,5 +1,6 @@
 import styles from '../styles/modules/App.module.scss';
-import Wave from './WavePortal';
+import MintUsernameApp from './MintUsernameApp';
+import WavePortal from './WavePortal';
 
 declare global {
     interface Window {
@@ -8,10 +9,10 @@ declare global {
 }
 
 const App = () => {
-
     return (
         <div className={styles.container}>
-            <Wave />
+            {/* <WavePortal /> */}
+            <MintUsernameApp />
         </div>
     );
 };
