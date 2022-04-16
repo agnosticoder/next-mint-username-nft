@@ -12,6 +12,7 @@ const App = () => {
     return (
         <div className={styles.container}>
             {/* <WavePortal /> */}
+            {/* //todo: add some ENS_Polygon goodies to this app, switching connected wallet address, error handling, withdrwals etc.  */}
             <MintUsernameApp />
         </div>
     );
